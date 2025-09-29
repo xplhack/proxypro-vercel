@@ -6,16 +6,6 @@ export default async function handler(req, res) {
     return;
   }
 
-  const allowedDomain = "vod.tuxchannel.mx";
-  try {
-    // const allowedDomain = "vod.tuxchannel.mx";
-// if (!targetUrl.hostname.endsWith(allowedDomain)) {
-//   return res.status(403).send("❌ Dominio no permitido.");
-// }
-  } catch (err) {
-    return res.status(400).send("❌ URL inválida.");
-  }
-
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error("❌ No se pudo acceder al video.");
