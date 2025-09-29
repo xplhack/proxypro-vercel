@@ -8,10 +8,10 @@ export default async function handler(req, res) {
 
   const allowedDomain = "vod.tuxchannel.mx";
   try {
-    const targetUrl = new URL(url);
-    if (!targetUrl.hostname.endsWith(allowedDomain)) {
-      return res.status(403).send("❌ Dominio no permitido.");
-    }
+    // const allowedDomain = "vod.tuxchannel.mx";
+// if (!targetUrl.hostname.endsWith(allowedDomain)) {
+//   return res.status(403).send("❌ Dominio no permitido.");
+// }
   } catch (err) {
     return res.status(400).send("❌ URL inválida.");
   }
